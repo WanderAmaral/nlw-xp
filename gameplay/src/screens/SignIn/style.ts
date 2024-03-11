@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -6,11 +7,28 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     justifyContent: "center",
+    backgroundColor: theme.colors.background,
   },
 
-  input: {
-    height: 50,
-    width: 200,
-    borderBottomWidth: 2
+  image: {
+    width: "100%",
+    height: 360,
+  },
+  content: {
+    marginTop: -40,
+    paddingHorizontal: 50
+  },
+
+  title: {
+    color: theme.colors.heading,
+    textAlign: "center",
+    fontSize: 40,
+    marginBottom: 16,
+  },
+  subtitles: {
+    color: theme.colors.heading,
+    fontSize: 15,
+    textAlign: "center",
+    marginBottom: 64,
   },
 });
