@@ -1,3 +1,4 @@
+
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
@@ -16,7 +17,7 @@ export const styles = StyleSheet.create({
   },
   content: {
     marginTop: -40,
-    paddingHorizontal: 50
+    paddingHorizontal: 50,
   },
 
   title: {
@@ -24,11 +25,14 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 40,
     marginBottom: 16,
+    fontFamily: theme.fonts.title700
   },
   subtitles: {
     color: theme.colors.heading,
     fontSize: 15,
     textAlign: "center",
     marginBottom: 64,
+    fontFamily: theme.fonts.title500
+    
   },
 });
