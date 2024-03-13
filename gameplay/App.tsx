@@ -8,20 +8,33 @@ import {
   Rajdhani_500Medium,
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
+import { StatusBar } from "react-native";
+import BackGround from "./src/components/Background";
+import Home from "./src/screens/Home";
 
 const App = () => {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
     Rajdhani_700Bold,
-    Rajdhani_500Medium
+    Rajdhani_500Medium,
   });
 
   if (!fontsLoaded) {
     return <AppLoading />;
   }
 
-  return <SignIn />;
+  return (
+    <BackGround>
+      <StatusBar
+        barStyle={"light-content"}
+        backgroundColor={"transparent"}
+        translucent
+      />
+      {/* <SignIn /> */}
+      <Home />
+    </BackGround>
+  );
 };
 
 export default App;
