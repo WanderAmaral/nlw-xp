@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     justifyContent: "center",
-    backgroundColor: theme.colors.background,
+    
   },
 
   image: {
@@ -32,7 +32,9 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: "center",
     marginBottom: 64,
-    fontFamily: theme.fonts.title500
+    fontFamily: theme.fonts.title500,
+    lineHeight: 25
+    
     
   },
 });
