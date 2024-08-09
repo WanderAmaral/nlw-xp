@@ -1,24 +1,27 @@
-import { View } from "react-native";
-import { theme } from "../../global/styles/theme";
-import { LinearGradient } from "expo-linear-gradient";
-import { styles } from "./styles";
-import { Image } from "react-native";
+import React from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Image } from 'react-native';
 
-interface AvataProps {
-  imageUrl: string;
+import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
+
+type Props = {
+  urlImage: string;
 }
 
-const Avatar = ({ imageUrl }: AvataProps) => {
-  const { secondary80, secondary100 } = theme.colors;
+export function Avatar({ urlImage }: Props) {
+  const { secondary50, secondary70 } = theme.colors;
 
   return (
     <LinearGradient
       style={styles.container}
-      colors={[secondary80, secondary100]}
+      colors={[secondary50, secondary70]}
     >
-      <Image source={{ uri: imageUrl }} style={styles.avatar} />
+      <Image 
+        source={{ uri: urlImage }}
+        style={styles.avatar}
+      />
     </LinearGradient>
-  );
-};
+  )
 
-export default Avatar;
+}

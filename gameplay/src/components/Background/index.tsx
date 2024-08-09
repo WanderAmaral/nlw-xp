@@ -1,12 +1,14 @@
-import { LinearGradient } from "expo-linear-gradient";
-import { styles } from "./styles";
-import { theme } from "../../global/styles/theme";
+import React, { ReactNode } from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
 
-interface BackGroundProps {
-  children: React.ReactNode;
+import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
+
+type Props = {
+  children: ReactNode;
 }
 
-const BackGround = ({ children }: BackGroundProps) => {
+export function Background({ children }: Props) {
   const { secondary80, secondary100 } = theme.colors;
 
   return (
@@ -16,7 +18,7 @@ const BackGround = ({ children }: BackGroundProps) => {
     >
       {children}
     </LinearGradient>
-  );
-};
+  )
+}
 
-export default BackGround;
+
