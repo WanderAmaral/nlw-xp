@@ -1,19 +1,27 @@
-import { Image, TouchableOpacity, View, Text } from "react-native";
-import { styles } from "./style";
+import React from 'react';
+import { Text, Image, View } from 'react-native';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
-import Discord from "../../assets/discord.png";
+import DiscordImg from '../../assets/discord.png';
+import { styles } from './style';
 
-interface ButtonIconProps {
-  children: string;
+type Props = RectButtonProps & {
+  title: string;
 }
 
-export const ButtonIcon = ({ children }: ButtonIconProps) => {
-  return (
-    <TouchableOpacity style={styles.container}>
+export function ButtonIcon({ title, ...rest } : Props){
+  return(
+    <RectButton 
+      style={styles.container} 
+      {...rest }
+    >
       <View style={styles.iconWrapper}>
-        <Image source={Discord} style={styles.icon} />
+        <Image source={DiscordImg} style={styles.icon} />
       </View>
-      <Text style={styles.title}>{children}</Text>
-    </TouchableOpacity>
+
+      <Text style={styles.title}>
+        { title }
+      </Text>
+    </RectButton>
   );
-};
+}

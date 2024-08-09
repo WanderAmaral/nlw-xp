@@ -8,9 +8,10 @@ import { styles } from "./style";
 import PlayerSvg from "../../assets/player.svg";
 import CalendarSvg from "../../assets/calendar.svg";
 
+
+import { categories } from "../../utils/categories";
 import { GuildProps } from "../Guild";
 import { GuildIcon } from "../GuildIcon";
-import { categories } from "../../utils/categories.ts";
 
 export type AppointmentProps = {
   id: string;
